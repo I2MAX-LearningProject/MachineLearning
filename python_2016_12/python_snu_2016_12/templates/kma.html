@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>기상청 정보</title>
+</head>
+<body>
+
+    <img src="{{ url_for('static', filename='snu.jpg') }}">
+
+    <table>
+    {% for i in kma %}
+        <tr>
+        {% for j in i %}
+            <td>{{j}}</td>
+        {% endfor %}
+        </tr>
+    {% endfor %}
+    </table>
+
+</body>
+</html>
